@@ -1,0 +1,4 @@
+-- NOTE:
+-- Buat RemoteEvent bernama "RespawnAllEvent"
+-- Lokasi: ReplicatedStorage
+-- Tidak dijalankan, hanya dokumentasi struktur
