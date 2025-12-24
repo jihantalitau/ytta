@@ -9,7 +9,7 @@ local PLACE_ID = game.PlaceId
 
 -- ====== ADMIN (GANTI USERID KAMU) ======
 local ADMINS = {
-	[123456789] = true, -- GANTI DENGAN USERID KAMU
+	[9683969863] = true, -- GANTI DENGAN USERID KAMU
 }
 
 -- ====== REMOTE EVENT (AUTO CREATE) ======
