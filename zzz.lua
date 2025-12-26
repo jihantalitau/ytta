@@ -3,6 +3,18 @@ local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 local mouse = localPlayer:GetMouse()
 
+-- Membuat tanda "Auto" yang mengambang di layar
+local autoLabel = Instance.new("TextLabel")
+autoLabel.Size = UDim2.new(0, 100, 0, 50)
+autoLabel.Position = UDim2.new(0.5, -50, 0.5, -25)
+autoLabel.Text = "Auto"
+autoLabel.TextColor3 = Color3.new(1, 1, 1)  -- Putih
+autoLabel.BackgroundColor3 = Color3.new(0, 0, 0)  -- Hitam
+autoLabel.BackgroundTransparency = 0.5
+autoLabel.Font = Enum.Font.SourceSansBold
+autoLabel.FontSize = "Size18"
+autoLabel.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
 -- Langkah 1: Tekan layar selama 2 detik
 local function pressScreen()
     local function onTouchBegan(input, gameProcessed)
@@ -63,4 +75,7 @@ local function main()
     clickBasedOnColor()
 end
 
-main()
+-- Jika "Auto" aktif, jalanan script
+if autoLabel then
+    main()
+end
