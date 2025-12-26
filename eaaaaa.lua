@@ -8,6 +8,11 @@ local function respawnAllPlayers()
     print("Respawn semua pemain...")
     for _, player in pairs(Players:GetPlayers()) do
         local character = player.Character or player.CharacterAdded:Wait()
+        -- Reset karakter
+        character:BreakJoints()
+        player.LoadCharacter()
+        -- Tunggu sampai karakter baru dibuat
+        character = player.Character or player.CharacterAdded:Wait()
         character:SetPrimaryPartCFrame(CFrame.new(respawnPosition))
     end
 end
@@ -21,5 +26,5 @@ Players.PlayerAdded:Connect(function(player)
 end)
 
 -- Contoh penggunaan: Respawn semua pemain setelah 10 detik
-wait(1)
+wait(2)
 respawnAllPlayers()
