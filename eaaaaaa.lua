@@ -13,5 +13,5 @@ while true do
     for _, player in ipairs(Players:GetPlayers()) do
         respawnPlayer(player)
     end
-    wait(5) -- Respawn interval setiap 5 detik, bikin sesuai kebutuhan
+    wait(1) -- Respawn interval setiap 5 detik, bikin sesuai kebutuhan
 end
